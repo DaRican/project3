@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
+nav{
+    background-color: skyblue;
+    font-family:'Press Start 2P', cursive;
+    font-size: 10px;
+    /* position: -webkit-sticky;
+    position: sticky;
+    top: 0; */
+}
+
+/* li:hover{
+    /* background-color:pink; */
+    /* font-size:2em;
+}  */
+li{
+    font-family: 'Raleway', sans-serif;
+    font-size:1.5em;
+}
+.form-control{
+font-size:10px;
+}
