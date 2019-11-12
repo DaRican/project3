@@ -1,7 +1,7 @@
 const router = require('express').Router();
 
 // created model
-let Skills = require('../models/skills.model');
+let Skills = require('../../models/skills.model');
 
 
 // looks for the schools/education
