@@ -25,12 +25,9 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 
-// our database uri need to get from the mongo db dashboard our data base is stored in the uri it is how we start our connection 
-// need to set the ATLAS_URI which is an environment variable the key to atlas uri is in dotenv file
-const uri = process.env.ATLAS_URI;
+// Set localhost and process.env.MONGODB_URI (heroku)
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/joblistings",  { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true});
 
-mongoose.connect(uri, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true}
-    );
 const connection = mongoose.connection;
 connection.once('open',() => {
     console.log("MongoDB database connection established successfully");
