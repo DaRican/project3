@@ -105,7 +105,7 @@ axios.post('http://localhost:5000/education/add', education )
     render(){
         return (
             <div>
-                <CreateProfile/>
+                {/* <CreateProfile/> */}
                 <h3>Create New Education log</h3>
                 <form onSubmit={this.onSubmit}>
                 <div className="form-group">
