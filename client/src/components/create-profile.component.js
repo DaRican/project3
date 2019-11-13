@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import NavBar from './navbar';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../css/CreateProfile.css';
 
 
 export default class CreateProfile extends Component {

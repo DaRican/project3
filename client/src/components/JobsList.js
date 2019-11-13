@@ -4,19 +4,20 @@ import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import NavBar from './navbar';
-import API from '../utils/API'
+import API from '../utils/API';
+import '../css/Jobs.css';
 
 
 const Job = props => (
     <table>
         <tr>
 
-            <td>{props.job.jobTitle}</td>
-            <td>{props.job.companyArray}</td>
-            <td>{props.job.city}</td>
-            <td>{props.job.state}</td>
-            <td>{props.job.summary}</td>
-            <td>{props.job.link}</td>
+            <td id='job'>{props.job.jobTitle}</td>
+            <td id='company'>{props.job.companyArray}</td>
+            <td id='city' >{props.job.city}</td>
+            <td id='state'>{props.job.state}</td>
+            <td id='summary'>{props.job.summary}</td>
+            {/* <td>{props.job.link}</td> */}
             <td>
                 <Link to={"/edit/" + props.job._id}>edit</Link> | <a href="#" onClick={() => { props.deleteJob(props.job._id) }}>delete</a>
             </td>
@@ -94,12 +95,12 @@ export default class JobList extends Component {
                     <thread className="thead-light">
                         <thead>
                             <tr>
-                                <th>Job Title</th>
-                                <th>Company Array</th>
-                                <th>City</th>
-                                <th>State</th>
-                                <th>Summary</th>
-                                <th>Link</th>
+                                <th class='headerJob'>Job Title</th>
+                                <th class='headerCompany'>Company</th>
+                                <th class='headerCity'>City</th>
+                                <th class='headerState'>State</th>
+                                <th class='headerSummary'>Summary</th>
+                                <th class='headerLink'>Link</th>
                             </tr>
                         </thead>
 
