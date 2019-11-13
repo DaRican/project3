@@ -175,7 +175,9 @@ fieldset{
   /* margin-left:-120px */
   
 }
-
+.form-control{
+  height: 80%;
+}
 .App-logo {
   height: 40vmin;
 }
@@ -296,6 +298,10 @@ text-align: left;
 text-align: left;
 /* border:solid; */
 
+}
+.EC{
+  margin-left:400px;
+  width:100%;
 }
 .gitHubLink {
   object-fit: cover;
