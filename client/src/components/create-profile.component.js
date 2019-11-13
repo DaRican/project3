@@ -103,7 +103,7 @@ export default class CreateProfile extends Component {
     render() {
         return (
             <div>
-                <NavBar/>
+                <NavBar />
                 <h5>Create new user</h5>
                 <form onSubmit={this.onSubmit}>
                     <div className="form-group">
