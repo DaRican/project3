@@ -3,6 +3,7 @@ const db = require("../models");
 // Defining methods for the jobsContoller
 module.exports = {
   findAll: function (req, res) {
+    console.log("JOBS HIT");
     db.Jobs
       .find(req.query)
       .sort({ date: -1 })
@@ -21,13 +22,13 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
-  update: function(req, res) {
+  update: function (req, res) {
     db.Jobs
       .findOneAndUpdate({ _id: req.params.id }, req.body)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
-  remove: function(req, res) {
+  remove: function (req, res) {
     db.Jobs
       .findById({ _id: req.params.id })
       .then(dbModel => dbModel.remove())
