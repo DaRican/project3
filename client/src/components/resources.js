@@ -45,7 +45,7 @@ class Resources extends React.Component {
 
 
        <div className="colomn2">
-         <h3>Submit to vote</h3>
+         <h3>Submit to Vote</h3>
        <UpVote />
        </div>
        </div>
