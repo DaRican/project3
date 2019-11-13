@@ -3,6 +3,15 @@ var cheerio = require("cheerio");
 var axios = require("axios");
 const db = require("../../models")
 
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/joblistings", { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true });
+
+const connection = mongoose.connection;
+connection.once('open', () => {
+  console.log("MongoDB database connection established successfully");
+});
+
+
+
 // First, tell the console what server3.js is doing
 console.log("\n******************************************\n" +
   "Webscraping through Indeed.com\n" +
@@ -34,7 +43,7 @@ axios.get("https://www.indeed.com/jobs?q=junior+web+developer&l=Independence%2C+
 
     results.push({
       jobTitle: jobTitle,
-      company: company,
+      companyArray: company,
       city: city,
       state: state,
       summary: summary,
@@ -48,6 +57,7 @@ axios.get("https://www.indeed.com/jobs?q=junior+web+developer&l=Independence%2C+
 
   console.log(results);
 
+
   db.Jobs
     .remove({})
     .then(() => db.Jobs.collection.insertMany(results))
@@ -59,5 +69,7 @@ axios.get("https://www.indeed.com/jobs?q=junior+web+developer&l=Independence%2C+
       console.error(err);
       process.exit(1);
     });
+
+
 
 });
