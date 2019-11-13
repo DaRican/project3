@@ -5,7 +5,7 @@ import NavBar from './navbar';
 import pancake from '../images/8bitPC.jpg'; 
 import Login from './oauth';
 
-import '../css/App.css';
+import '../css/jobs.css';
 
 class Jobs extends React.Component {
 
@@ -13,9 +13,26 @@ class Jobs extends React.Component {
 
   render (){
     return (
-      <div className="App">
+      <div className="job-App">
         <NavBar />
+
+
+        <header className="job-header">
+          <h2> Jobs</h2>
+        <div className="job-hero-image-container">
+          <br></br>
+          </div>
+          <div className="job-hero-image-container">
+            <br></br>
+          </div>
+          <div className="job-hero-image-container">
+            <br></br>
+          </div>
+         
+        </header>
+           
       </div>
+     
   );
   }
 }
