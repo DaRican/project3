@@ -10,6 +10,13 @@ export default class CreateProfile extends Component {
 
         // binding the target value/methods to the this key word so it won't be undefined
         this.onChangeUsername = this.onChangeUsername.bind(this);
+        this.onChangefirstName = this.onChangefirstName.bind(this);
+        this.onChangelastName = this.onChangelastName.bind(this);
+        this.onChangeemail = this.onChangeemail.bind(this);
+        this.onChangepassword = this.onChangepassword.bind(this);
+        this.onChangeconfirmPassword = this.onChangeconfirmPassword.bind(this);
+
+
 
         this.onSubmit = this.onSubmit.bind(this);
 
@@ -31,11 +38,31 @@ export default class CreateProfile extends Component {
 
     onChangeUsername(e) {
         this.setState({
-            username: e.target.value,
-            firstName: e.target.value,
-            lastName: e.target.value,
-            email: e.target.value,
-            password: e.target.value,
+            username: e.target.value
+        });
+    }
+    onChangefirstName(e) {
+        this.setState({
+            firstName: e.target.value
+        });
+    }
+    onChangelastName(e) {
+        this.setState({
+            lastName: e.target.value
+        });
+    }
+    onChangeemail(e) {
+        this.setState({
+            email: e.target.value
+        });
+    }
+    onChangepassword(e) {
+        this.setState({
+            password: e.target.value
+        });
+    }
+    onChangeconfirmPassword(e) {
+        this.setState({
             confirmPassword: e.target.value
         });
     }
@@ -90,35 +117,35 @@ export default class CreateProfile extends Component {
                             required
                             className="form-control"
                             value={this.state.firstName}
-                            onChange={this.onChangeUsername}
+                            onChange={this.onChangefirstName}
                         />
                         <label>Last Name: </label>
                         <input type="text"
                             required
                             className="form-control"
                             value={this.state.lastName}
-                            onChange={this.onChangeUsername}
+                            onChange={this.onChangelastName}
                         />
                         <label>Email: </label>
                         <input type="text"
                             required
                             className="form-control"
                             value={this.state.email}
-                            onChange={this.onChangeUsername}
+                            onChange={this.onChangeemail}
                         />
                         <label>Password: </label>
                         <input type="text"
                             required
                             className="form-control"
                             value={this.state.password}
-                            onChange={this.onChangeUsername}
+                            onChange={this.onChangepassword}
                         />
                         <label>Confirm Passord: </label>
                         <input type="text"
                             required
                             className="form-control"
                             value={this.state.confirmPassword}
-                            onChange={this.onChangeUsername}
+                            onChange={this.onChangeconfirmPassword}
                         />
                     </div>
                     <div className="form-group">

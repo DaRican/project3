@@ -35,9 +35,9 @@ connection.once('open', () => {
 
 
 // need to make the files in the routes folder first then require them and then use the files
-const educationRouter = require('./api/education');
-const profileRouter = require('./routes/profile');
-const skillsRouter = require('./routes/skills');
+const educationRouter = require('./routes/api/education');
+const profileRouter = require('./routes/api/profile');
+const skillsRouter = require('./routes/api/skills');
 
 // using the files router is directing the user to the search for file 
 app.use('/education', educationRouter);
