@@ -7,16 +7,23 @@ import Login from './oauth';
 
 import '../css/App.css';
 
+import UpVote from './UpVote.component';
 class Resources extends React.Component {
 
 
 
   render (){
     return (
-      <div className="App">
+      <div className="background" >
         <NavBar />
-        <header className="App-header">
-   <section class="lessonOneVideos">
+        
+        {/* <header className="App-header">
+      
+     
+       </header> */}
+       <div className="projectRow"> 
+       <div className="colomn1">
+       <section class="lessonOneVideos">
      <p>Lesson 1 Videos</p>
      <iframe class="video" width="252" height="229" src="https://www.youtube.com/embed/ieb6Svbc10E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
      <iframe class="video" width="252" height="229" src="https://www.youtube.com/embed/Y9rMbKHoTBI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -34,8 +41,15 @@ class Resources extends React.Component {
      <iframe class="video" width="252" height="229" src="https://www.youtube.com/embed/zJO9g7S2_Xo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
      <iframe class="video" width="252" height="229" src="https://www.youtube.com/embed/Tio88WjwFO0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
    </section>
-       </header>
-      </div>
+       </div>
+
+
+       <div className="colomn2">
+         <h3>Submit your Vote</h3>
+       <UpVote />
+       </div>
+       </div>
+       </div>
   );
   }
 }
