@@ -15,9 +15,51 @@ class Resources extends React.Component {
     return (
       <div className="App">
         <NavBar />
+        <header className="App-header">
+    <section class="lessonOneVideos">
+      <p>Lesson 1 Videos</p>
+      <iframe class="video" width="252" height="229" src="https://www.youtube.com/embed/ieb6Svbc10E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>      
+      <iframe class="video" width="252" height="229" src="https://www.youtube.com/embed/Y9rMbKHoTBI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe class="video" width="252" height="229" src="https://www.youtube.com/embed/0lpxKw6E90Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+
+    <section class="lessonTwoVideos">
+      <p>Lesson 2 Videos</p>
+      <iframe class="video" width="252" height="229" src="https://www.youtube.com/embed/Y9rMbKHoTBI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe class="video" width="252" height="229" src="https://www.youtube.com/embed/wQovwgW020g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe class="video" width="252" height="229" src="https://www.youtube.com/embed/x_wlcp-W27c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+
+
+    <section class="lessonThreeVideos">
+      <p>Lesson 3 Videos</p>
+      <iframe class="video" width="252" height="229" src="https://www.youtube.com/embed/rlhhRVO5EOg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe class="video" width="252" height="229" src="https://www.youtube.com/embed/zJO9g7S2_Xo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe class="video" width="252" height="229" src="https://www.youtube.com/embed/Tio88WjwFO0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+    </section>
+
+         
+        
+        </header>
+
+
+
+      
+
+
+  
+ 
+
+
       </div>
+      
   );
+
   }
+   
 }
 
 export default Resources;
