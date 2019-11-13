@@ -6,6 +6,7 @@ import EducationList from './education-list.component'
 import CreateProfile from './create-profile.component'
 import '../css/userP.css';
 import '../css/grid.css';
+import '../css/CreateEducation.css';
 import NavBar from './navbar';
 
 export default class CreateEducation extends Component {
