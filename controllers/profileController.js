@@ -23,7 +23,7 @@ module.exports = {
 
     const newProfile = new Profile({ username });
 
-    db.newProfile.save()
+    db.Profile.save()
       .then(() => res.json('Profile added!'))
       .catch(err => res.status(400).json('Error: ' + err));
   },
