@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import NavBar from './navbar';
 import '../css/aboutUs.css';
-
+import Queen from './images/killerqueen.jpg';
 
 
 

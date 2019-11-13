@@ -11,7 +11,7 @@
 .about-hero-image-container {
     object-fit: cover;
 	height: 35%;
-	width:40%;
+	width:25%;
 	background-image:url("../images/darkbluebackground1.png");
 	margin-left: 5%;
 	margin-top: 3%;
@@ -34,24 +34,94 @@
 	margin-top:15%;
 }
 
-.pic{
+.about-pic{
+	content: center;
     height:65%;
-    width:26%;
-    border-radius: 50%;
+    width:100%;
+    border-radius: 5%;
     color:skyblue;
-    background-image:url("../images/sunSet.gif");
-    background-color:#282c34;
+    background-color:skyblue;
     font-family:'Press Start 2P', cursive;
-    border:solid skyblue;
+	border:solid black;
 }
 
 .aboutIcon{
     text-align: center;
     padding: 30% 10%;
-    margin: 65px;
+    margin: 5px;
 
 }
-.Name{
-    border-bottom:solid skyblue;
-    margin-bottom:5px;
+.about-Name{
+	font-size: 14px;
+	margin-bottom:5px;
+	margin-top: -120px;
+
 }
+
+.about-header {
+	min-height: 100vh;
+
+}
+
+.job-hero-image-container {
+   
+	height: 55%;
+	width:80%;
+	background-image:url("../images/darkbluebackground1.png");
+	margin-left: 5%;
+	margin-top: 3%;
+	border-radius:5%;
+	border:solid skyblue;
+}
+.nes-ash {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 25%;	
+}
+.nes-mario {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 25%;	
+}
+.nes-bulbasaur {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 25%;	
+}
+.nes-charmander {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 25%;	
+}
+.nes-squirtle {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 25%;	
+}
+.nes-kirby {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 25%;	
+}
+
+@media only screen and (max-width: 660px) {
+	 
+	.about-hero-image-container {
+		object-fit: cover;
+		height: 45%;
+		width:90%;
+		margin-left: 5%;
+		margin-top: 3%;
+		border-radius:5%;
+		border:solid skyblue;
+	}
+		}
+	  
+	
+  
