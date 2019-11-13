@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import NavBar from './navbar';
 
 
 export default class CreateProfile extends Component {
@@ -102,6 +103,7 @@ export default class CreateProfile extends Component {
     render() {
         return (
             <div>
+                <NavBar/>
                 <h5>Create new user</h5>
                 <form onSubmit={this.onSubmit}>
                     <div className="form-group">

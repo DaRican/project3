@@ -86,9 +86,9 @@ render(){
    
                   {/* <form action="/action_page.php" /> */}
                
-                  <CreateProfile/>
+                  {/* <CreateProfile/>
                
-                  <AddEmail/>
+                  <AddEmail/> */}
                   <a href="https://github.com/Fin23/group-project-3">  
                   <section className="icon-list">
                     <i className="nes-icon github is-large"></i>
