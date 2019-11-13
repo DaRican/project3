@@ -73,7 +73,7 @@ render(){
     return(
         <div> 
          
-    
+    <NavBar />
     <div className="row">
 
         <div className="right-column-home" >

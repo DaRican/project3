@@ -15,6 +15,7 @@ class Resources extends React.Component {
     return (
       <div className="App">
         <NavBar />
+        
         <header className="App-header">
     <section class="lessonOneVideos">
       <p>Lesson 1 Videos</p>
@@ -45,13 +46,6 @@ class Resources extends React.Component {
         
         </header>
 
-
-
-      
-
-
-  
- 
 
 
       </div>
