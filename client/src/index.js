@@ -9,13 +9,13 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 import './css/index.css';
 
-import App from './components/App';
+import App from './App';
 
 import Resources from './components/resources';
 import Jobs from './components/jobs';
 import AboutUs from './components/aboutUs';
 
-import NavBar from "./components/navbar"
+import Nav from "./components/Nav";
 import EducationList from "./components/education-list.component";
 import EditEducation from "./components/edit-education.component";
 import CreateEducation from "./components/create-education.component";
@@ -46,13 +46,6 @@ const routing = (
 {/* <App /> */}
 
 ReactDOM.render(routing, document.getElementById('root'));
-
-
-
-
-
-
-
 
 
 // If you want your app to work offline and load faster, you can change
