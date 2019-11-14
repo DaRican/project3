@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import DatePicker from 'react-datepicker';
@@ -50,17 +50,17 @@ export default class MainProfile extends Component {
 
   // react life cycle method, it is called right before anything is displayed on the page hard coding the first user so that the drop down user option is available until mongo is fully connected
   componentDidMount() {
-    axios.get('http://localhost:5000/profile/')
-      .then(response => {
-        if (response.data.length > 0) {
-          this.setState({
-            // passing in profile and mapping over the array then pulling the profile.username from mongo
-            users: response.data.map(profile => profile.username),
-            // setting username to the first one in the array
-            username: response.data[0].username
-          });
-        }
-      });
+    // axios.get('http://localhost:5000/profile/')
+    //   .then(response => {
+    //     if (response.data.length > 0) {
+    //       this.setState({
+    //         // passing in profile and mapping over the array then pulling the profile.username from mongo
+    //         users: response.data.map(profile => profile.username),
+    //         // setting username to the first one in the array
+    //         username: response.data[0].username
+    //       });
+    //     }
+    //   });
 
   }
   onChangeUsername(e) {
