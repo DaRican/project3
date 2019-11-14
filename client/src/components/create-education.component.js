@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 import EducationList from './education-list.component'
@@ -44,17 +44,17 @@ export default class CreateEducation extends Component {
 
     // react life cycle method, it is called right before anything is displayed on the page hard coding the first user so that the drop down user option is available until mongo is fully connected
     componentDidMount() {
-        axios.get('http://localhost:5000/profile/')
-            .then(response => {
-                if (response.data.length > 0) {
-                    this.setState({
-                        // passing in profile and mapping over the array then pulling the profile.username from mongo
-                        users: response.data.map(profile => profile.username),
-                        // setting username to the first one in the array
-                        username: response.data[0].username
-                    });
-                }
-            });
+        // axios.get('http://localhost:5000/profile/')
+        //     .then(response => {
+        //         if (response.data.length > 0) {
+        //             this.setState({
+        //                 // passing in profile and mapping over the array then pulling the profile.username from mongo
+        //                 users: response.data.map(profile => profile.username),
+        //                 // setting username to the first one in the array
+        //                 username: response.data[0].username
+        //             });
+        //         }
+        //     });
 
     }
     onChangeUsername(e) {
@@ -97,8 +97,8 @@ export default class CreateEducation extends Component {
         }
         console.log(education);
         // putting the axios request inside the submit button so they work together 
-        axios.post('http://localhost:5000/education/add', education)
-            .then(res => console.log(res.data));
+        // axios.post('http://localhost:5000/education/add', education)
+        //     .then(res => console.log(res.data));
 
         // when submitted this will take the user to the list of schools
         //     window.location = '/';
