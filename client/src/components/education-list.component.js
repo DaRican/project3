@@ -48,7 +48,7 @@ export default class EducationList extends Component {
     }
 
     deleteEducation(id) {   
-        API.removeEducation()
+        API.removeEducation(id)
             .then(res => console.log(res.data));
 
         this.setState({

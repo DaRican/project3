@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import NavBar from './navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../css/CreateProfile.css';
@@ -87,8 +87,9 @@ export default class CreateProfile extends Component {
 
         //sending data to the back end connect the front and back together
         // axios sends a post to the back end end point, expects json so send the profile object as a second argument,  .then is a promise, 
-        axios.post('http://localhost:5000/profile/add', profile)
-            .then(res => console.log(res.data));
+        
+        // axios.post('http://localhost:5000/profile/add', profile)
+        //     .then(res => console.log(res.data));
 
         this.setState({
             username: '',
