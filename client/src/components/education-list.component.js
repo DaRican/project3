@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import '../css/list-education.css';
-import NavBar from './navbar';
+import API from '../utils/API';
 
 // this is the second component that is a functional react component it is different than a class component because it does not have a state or a life cycle methods no did mount method if you just need to accept props and return jsx use a functional component most components should be in there own file unless they are small enough like below
 const Education = props => (
@@ -30,11 +30,18 @@ export default class EducationList extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:5000/education/')
-            .then(response => {
-                // getting all fields from MongoDB
-                this.setState({ degrees: response.data });
-            })
+        // axios.get('http://localhost:5000/education/')
+        //     .then(response => {
+        //         // getting all fields from MongoDB
+        //         this.setState({ degrees: response.data });
+        //     })
+        //     .catch((error) => {
+        //         console.log(error);
+        //     });
+        API.getJobs().then(response => {
+            console.log(response.data);
+            this.setState({ jobs: response.data });
+        })
             .catch((error) => {
                 console.log(error);
             });

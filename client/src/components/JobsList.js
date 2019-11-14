@@ -46,7 +46,7 @@ export default class JobList extends Component {
         //         console.log(error);
         //     });
 
-        API.getJobs().then(response => {
+        API.getEducation().then(response => {
             console.log(response.data);
             this.setState({ jobs: response.data });
         })
