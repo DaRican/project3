@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-let Job = require('../models');
+let Job = require('../../models');
 
 router.route('/').get((req, res) => {
     Job.find()
