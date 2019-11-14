@@ -19,5 +19,8 @@ export default {
   }, // Get education data from server API
   getEducation: function(educationData) {
     return axios.get("/api/education", educationData);
+  }, // Delete education data
+  removeEducation: function(id) {
+    return axios.delete("/api/education" + id);
   }
 };

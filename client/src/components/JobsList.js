@@ -46,7 +46,7 @@ export default class JobList extends Component {
         //         console.log(error);
         //     });
 
-        API.getEducation().then(response => {
+        API.getJob().then(response => {
             console.log(response.data);
             this.setState({ jobs: response.data });
         })
@@ -72,7 +72,7 @@ export default class JobList extends Component {
 
 
     deleteJob(id) {
-        axios.delete('http://localhost:5000/jobs/' + id)
+        API.deleteJob()
             .then(res => console.log(res.data));
 
         this.setState({

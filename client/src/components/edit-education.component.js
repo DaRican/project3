@@ -40,28 +40,28 @@ export default class EditEducation extends Component {
 
     // react life cycle method, it is called right before anything is displayed on the page hard coding the first user so that the drop down user option is available until mongo is fully connected
     componentDidMount() {
-        axios.get('http://localhost:5000/education/' + this.props.match.params.id)
-            .then(response => {
+        // axios.get('http://localhost:5000/education/' + this.props.match.params.id)
+        //     .then(response => {
 
-                this.setState({
-                    username: response.data.username,
-                    school: response.data.school,
-                    duration: response.data.duration,
-                    startDate: new Date(response.data.startDate),
-                    yearGraduated: new Date(response.data.yearGraduated)
-                });
-            })
-            .catch(function (error) {
-                console.log(error);
-            })
-        axios.get('http://localhost:5000/profile/')
-            .then(response => {
-                if (response.data.length > 0) {
-                    this.setState({
-                        users: response.data.map(profile => profile.username),
-                    })
-                }
-            })
+        //         this.setState({
+        //             username: response.data.username,
+        //             school: response.data.school,
+        //             duration: response.data.duration,
+        //             startDate: new Date(response.data.startDate),
+        //             yearGraduated: new Date(response.data.yearGraduated)
+        //         });
+        //     })
+        //     .catch(function (error) {
+        //         console.log(error);
+        //     })
+        // axios.get('http://localhost:5000/profile/')
+        //     .then(response => {
+        //         if (response.data.length > 0) {
+        //             this.setState({
+        //                 users: response.data.map(profile => profile.username),
+        //             })
+        //         }
+        //     })
 
     }
     onChangeUsername(e) {
@@ -104,8 +104,8 @@ export default class EditEducation extends Component {
         }
         console.log(education);
         // putting the axios request inside the submit button so they work together 
-        axios.post('http://localhost:5000/education/update' + this.props.match.params.id, education)
-            .then(res => console.log(res.data));
+        // axios.post('http://localhost:5000/education/update' + this.props.match.params.id, education)
+        //     .then(res => console.log(res.data));
 
         // when submitted this will take the user to the list of schools
         //     window.location = '/';
