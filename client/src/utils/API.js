@@ -16,5 +16,8 @@ export default {
   // Saves a book to the database
   saveJob: function(jobData) {
     return axios.post("/api/jobs", jobData);
+  }, // Get education data from server API
+  getEducation: function(educationData) {
+    return axios.get("/api/education", educationData);
   }
 };
