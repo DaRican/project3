@@ -14,10 +14,6 @@
     "react-datepicker": "^2.9.6",
     "react-router": "^5.1.2"
   },
-  "engines": {
-    "node": "10.16.3",
-    "npm": "6.12.1"
-  },
   "scripts": {
     "postinstall": "ng build",
     "start": "react-scripts start",
