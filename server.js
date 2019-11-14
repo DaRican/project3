@@ -1,9 +1,9 @@
 const express = require('express');
 var cors = require('cors');
+const path = require('path');
 // helps connect to mongo data base
 const mongoose = require('mongoose');
 const routes = require("./routes");
-
 
 // environment variables in the env file
 require('dotenv').config();
@@ -17,16 +17,23 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
+
 // Serve up static assets (usually on heroku)
-// if (process.env.NODE_ENV === "production") {
-//     app.use(express.static("client/public"));
-// }
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static("client"));
+
+    app.get('*', (req, res) => {
+        res.sendFile(path.resolve(__dirname, "client", "public", "index.html"))
+    })
+}
+
 // Add routes, both API and view
 app.use(routes);
 
 
 // Set localhost and process.env.MONGODB_URI (heroku)
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/joblistings", { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true });
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/joblistings",
+{ useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true });
 
 const connection = mongoose.connection;
 connection.once('open', () => {
