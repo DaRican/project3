@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
 var cheerio = require("cheerio");
 var axios = require("axios");
-const db = require("../../models")
+const db = require("../../models");
+
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/joblistings", { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true });
 
@@ -57,18 +58,20 @@ axios.get("https://www.indeed.com/jobs?q=junior+web+developer&l=Independence%2C+
 
   console.log(results);
 
+  axios.post("/api/jobs", results);
 
-  db.Jobs
-    .remove({})
-    .then(() => db.Jobs.collection.insertMany(results))
-    .then(data => {
-      console.log(data.result.n + " records inserted!");
-      process.exit(0);
-    })
-    .catch(err => {
-      console.error(err);
-      process.exit(1);
-    });
+
+  // db.Jobs
+  //   .remove({})
+  //   .then(() => db.Jobs.collection.insertMany(results))
+  //   .then(data => {
+  //     console.log(data.result.n + " records inserted!");
+  //     process.exit(0);
+  //   })
+  //   .catch(err => {
+  //     console.error(err);
+  //     process.exit(1);
+  //   });
 
 
 
