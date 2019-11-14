@@ -2,11 +2,11 @@
 import React from 'react';
 // import logo from './logo.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NavBar from './navbar';
-import pancake from '../images/8bitPC.jpg'; 
-import Login from './oauth';
+import NavBar from './components/navbar';
+import pancake from './images/8bitPC.jpg'; 
+import Login from './components/oauth';
 
-import '../css/App.css';
+import './css/App.css';
 
 class App extends React.Component {
 
