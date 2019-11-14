@@ -17,6 +17,8 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
+// Add routes, both API and view
+app.use(routes);
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
@@ -26,10 +28,6 @@ if (process.env.NODE_ENV === "production") {
         res.sendFile(path.resolve(__dirname, "client", "public", "index.html"))
     })
 }
-
-// Add routes, both API and view
-app.use(routes);
-
 
 // Set localhost and process.env.MONGODB_URI (heroku)
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/joblistings",
