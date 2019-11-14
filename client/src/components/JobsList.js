@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import NavBar from './navbar';
 import API from '../utils/API';
-import '../css/Jobs.css';
+import '../css/jobs.css';
 
 
 const Job = props => (
