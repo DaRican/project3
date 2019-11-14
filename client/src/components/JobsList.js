@@ -13,7 +13,7 @@ const Job = props => (
         <tr>
 
             <td id='job'>{props.job.jobTitle}</td>
-            <td id='company'>{props.job.companyArray}</td>
+            <td id='company'>{props.job.company}</td>
             <td id='city' >{props.job.city}</td>
             <td id='state'>{props.job.state}</td>
             <td id='summary'>{props.job.summary}</td>
@@ -46,7 +46,7 @@ export default class JobList extends Component {
         //         console.log(error);
         //     });
 
-        API.getJob().then(response => {
+        API.getJobs().then(response => {
             console.log(response.data);
             this.setState({ jobs: response.data });
         })
@@ -72,7 +72,7 @@ export default class JobList extends Component {
 
 
     deleteJob(id) {
-        API.deleteJob()
+        API.deleteJob(id)
             .then(res => console.log(res.data));
 
         this.setState({
