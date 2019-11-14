@@ -39,7 +39,7 @@ router.route('/:id').get((req, res) => {
 });
 
 // same thing as above except its a delete for that chosen object with same id
-router.route('/:id').delete((req, res) => {
+router.route('delete/:id').delete((req, res) => {
     Education.findByIdAndDelete(req.params.id)
         .then(() => res.json('Education deleted.'))
         .catch(err => res.status(400).json('Error: ' + err));

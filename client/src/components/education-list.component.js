@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
 import '../css/list-education.css';
 import API from '../utils/API';
 
@@ -38,7 +37,7 @@ export default class EducationList extends Component {
         //     .catch((error) => {
         //         console.log(error);
         //     });
-        API.getJobs().then(response => {
+        API.getEducation().then(response => {
             console.log(response.data);
             this.setState({ jobs: response.data });
         })
@@ -47,8 +46,8 @@ export default class EducationList extends Component {
             });
     }
 
-    deleteEducation(id) {
-        axios.delete('http://localhost:5000/education/' + id)
+    deleteEducation(id) {   
+        API.removeEducation()
             .then(res => console.log(res.data));
 
         this.setState({

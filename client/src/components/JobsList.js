@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
+// import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import NavBar from './navbar';
@@ -46,7 +46,7 @@ export default class JobList extends Component {
         //         console.log(error);
         //     });
 
-        API.getEducation().then(response => {
+        API.getJob().then(response => {
             console.log(response.data);
             this.setState({ jobs: response.data });
         })
@@ -72,7 +72,7 @@ export default class JobList extends Component {
 
 
     deleteJob(id) {
-        axios.delete('http://localhost:5000/jobs/' + id)
+        API.deleteJob()
             .then(res => console.log(res.data));
 
         this.setState({
