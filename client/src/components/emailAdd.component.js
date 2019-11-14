@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 
 
 export default class AddEmail extends Component {
@@ -42,12 +42,12 @@ onSubmit(e){
 
     //sending data to the back end connect the front and back together
     // axios sends a post to the back end end point, expects json so send the profile object as a second argument,  .then is a promise, 
-    axios.post('http://localhost:5000/email/add', emails )
-    .then(res => console.log(res.data));
+//     axios.post('http://localhost:5000/email/add', emails )
+//     .then(res => console.log(res.data));
 
-  this.setState({
-      email: ''
-  });
+//   this.setState({
+//       email: ''
+//   });
 }
 
     render(){

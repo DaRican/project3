@@ -37,13 +37,14 @@ export default class EducationList extends Component {
         //     .catch((error) => {
         //         console.log(error);
         //     });
-        API.getEducation().then(response => {
-            console.log(response.data);
-            this.setState({ jobs: response.data });
-        })
-            .catch((error) => {
-                console.log(error);
-            });
+        // API.getEducation()
+        //     .then(response => {
+        //     console.log(response.data);
+        //     this.setState({ jobs: response.data });
+        // })
+        //     .catch((error) => {
+        //         console.log(error);
+        //     });
     }
 
     deleteEducation(id) {   
