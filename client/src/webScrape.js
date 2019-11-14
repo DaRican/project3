@@ -58,7 +58,8 @@ axios.get("https://www.indeed.com/jobs?q=junior+web+developer&l=Independence%2C+
 
   console.log(results);
 
-  axios.post("/api/jobs", results);
+  axios.post("/api/jobs", results)
+    .then();
 
 
   // db.Jobs
