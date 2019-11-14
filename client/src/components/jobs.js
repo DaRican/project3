@@ -22,7 +22,7 @@ class Jobs extends React.Component {
 
 
         <header className="job-header">
-          <h2> Jobs this is it</h2>
+          <h2> Jobs </h2>
           <div className="job-hero-image-container">
             <br></br>
           </div>
